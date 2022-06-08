@@ -191,3 +191,29 @@ DROP COLUMN SaleDate
 
 Select SaleDateConverted
 from PortfolioProject.dbo.NashvilleHousing
+
+Select SaleDateConverted, Saleprice, PropertySplitAddress, PropertySplitCity
+From PortfolioProject.dbo.NashvilleHousing
+Group By SaleDateConverted, Saleprice, PropertySplitAddress, PropertySplitCity
+
+--- Query #2 \/
+
+
+Select LandUse, Saleprice, SoldAsVacant, SaleDateConverted
+From PortfolioProject.dbo.NashvilleHousing
+Group By LandUse, Saleprice, SoldAsVacant, SaleDateConverted
+
+Select LandUse, Saleprice, SoldAsVacant, SaleDateConverted
+From PortfolioProject.dbo.NashvilleHousing
+Where Landuse like '%Duplex%'
+Group By LandUse, Saleprice, SoldAsVacant, SaleDateConverted
+
+Select LandUse, Saleprice, SoldAsVacant, SaleDateConverted
+From PortfolioProject.dbo.NashvilleHousing
+Where Landuse like '%Condo%'
+Group By LandUse, Saleprice, SoldAsVacant, SaleDateConverted
+
+Select LandUse, Saleprice, SoldAsVacant, SaleDateConverted
+From PortfolioProject.dbo.NashvilleHousing
+Where Landuse like '%Single Family%'
+Group By LandUse, Saleprice, SoldAsVacant, SaleDateConverted
